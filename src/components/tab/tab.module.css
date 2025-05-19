@@ -1,0 +1,13 @@
+.tab {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  color: var(--tab-text-color);
+  user-select: none;
+}
+
+.active {
+  font-weight: 600;
+  color: var(--tab-active-text-color);
+  border-bottom: 2px solid var(--tab-active-underline-color);
+}
