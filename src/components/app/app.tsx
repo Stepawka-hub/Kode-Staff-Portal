@@ -1,8 +1,12 @@
 import { router } from "@routes";
 import { FC } from "react";
 import { RouterProvider } from "react-router-dom";
-import "./app.css";
+import s from "./app.module.css";
 
 export const App: FC = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <main className={s.content}>
+      <RouterProvider router={router} />
+    </main>
+  );
 };
