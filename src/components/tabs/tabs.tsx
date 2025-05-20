@@ -2,7 +2,7 @@ import { FC } from "react";
 import { getCurrentTab, setCurrentTab } from "@slices/app";
 import { useDispatch, useSelector } from "@store";
 import { TDepartments } from "src/types/types";
-import { Tab } from "@components/tab/tab";
+import { Tab } from "./tab";
 import { tabs } from "@utils/constants";
 import s from "./tabs.module.css";
 

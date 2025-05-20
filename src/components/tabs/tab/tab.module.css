@@ -4,6 +4,7 @@
   font-weight: 500;
   color: var(--tab-text-color);
   user-select: none;
+  flex-shrink: 0;
 }
 
 .active {
