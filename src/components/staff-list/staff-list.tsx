@@ -7,6 +7,7 @@ import { getUsersAsync } from "@thunks/staff";
 import { getError, getIsFetchUsers, getUsers } from "@slices/staff";
 import { UserCard } from "./user-card";
 import { getCurrentTab } from "@slices/app";
+import { EmptySearchResult } from "@components/empty-search-result";
 
 export const StaffList: FC = () => {
   const dispatch = useDispatch();
@@ -25,8 +26,16 @@ export const StaffList: FC = () => {
 
   if (error) {
     return (
-      <section className={s.errorContainer}>
+      <section className={s.centeredContainer}>
         <FatalError callback={fetchUsers} />
+      </section>
+    );
+  }
+
+  if (!users.length && !isLoading) {
+    return (
+      <section className={s.centeredContainer}>
+        <EmptySearchResult />
       </section>
     );
   }
