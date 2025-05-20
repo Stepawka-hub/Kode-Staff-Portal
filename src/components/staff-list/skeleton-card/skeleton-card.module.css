@@ -8,7 +8,7 @@
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 50%;
-  background-image: linear-gradient(90deg, #F3F3F6, #FAFAFA);
+  background-image: var(--skeleton-card-background);
 }
 
 .lines {
@@ -20,7 +20,7 @@
 .firstLine,
 .secondLine {
   border-radius: 1rem;
-  background-image: linear-gradient(90deg, #F3F3F6, #FAFAFA);
+  background-image: var(--skeleton-card-background);
 }
 
 .firstLine {

@@ -1,8 +1,15 @@
 :root {
+  --primary-color: #6534FF;
+  --primary-text-color: #050510;
+
   --search-bg-color: #F7F7F8;
   --search-placeholder-color: #C3C3C6;
 
   --tab-text-color: #97979B;
-  --tab-active-text-color: #050510;
-  --tab-active-underline-color: #6534FF;
+
+  --separator-color: #C3C3C6;
+
+  --skeleton-card-background: linear-gradient(90deg, #F3F3F6, #FAFAFA);
+
+
 }
