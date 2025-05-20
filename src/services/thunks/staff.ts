@@ -1,14 +1,13 @@
 import { getUsers } from "@api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { TUser } from "src/types/types";
+import { TDepartments, TUser } from "src/types/types";
 
 const GET_USERS = "staff/get-users";
 
-export const getUsersAsync = createAsyncThunk<TUser[], void>(
+export const getUsersAsync = createAsyncThunk<TUser[], TDepartments>(
   GET_USERS,
-  async () => {
-    const { items } = await getUsers();
-    console.log(items);
-    return items
+  async (tab) => {
+    const { items } = await getUsers(tab);
+    return items;
   }
 );
