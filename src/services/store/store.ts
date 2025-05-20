@@ -5,9 +5,11 @@ import {
   TypedUseSelectorHook,
 } from "react-redux";
 import appReducer from "@slices/app";
+import staffReducer from "@slices/staff";
 
 const rootReducer = combineReducers({
   app: appReducer,
+  staff: staffReducer,
 });
 
 export const store = configureStore({
