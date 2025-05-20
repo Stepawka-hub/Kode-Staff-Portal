@@ -10,6 +10,7 @@
   --separator-color: #C3C3C6;
 
   --skeleton-card-background: linear-gradient(90deg, #F3F3F6, #FAFAFA);
-
-
+  
+  --user-tag-color: #97979B;
+  --user-position-color: #55555C;
 }
