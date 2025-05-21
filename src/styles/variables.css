@@ -1,5 +1,6 @@
 :root {
   --primary-color: #6534FF;
+  --secondary-color: #fff;
   --primary-text-color: #050510;
   --gray-text-color: #97979B;
 
@@ -14,5 +15,5 @@
 
   --details-header-bg-color: #f7f7f8;
   --details-button-bg-color: #fff;
-  --details-button-border-color: #050510
+  --details-button-border-color: #050510;
 }

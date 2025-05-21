@@ -16,20 +16,19 @@ export const DetailsPage: FC = () => {
   const user = useSelector((state) => selectUser(state, id));
 
   const navigate = useNavigate();
-  const navigateToBack = () => navigate(-1);
+  const navigateToMain = () => navigate("/"); 
 
   if (!user) {
     return <NotFoundPage />;
   }
 
-  const { firstName, lastName, userTag, position, birthday, phone } =
-    user;
+  const { firstName, lastName, userTag, position, birthday, phone } = user;
 
   return (
     <section className={s.page}>
       <header className={s.header}>
         <div className={s.controls}>
-          <button className={s.backButton} onClick={navigateToBack}>
+          <button className={s.backButton} onClick={navigateToMain}>
             <img className={s.backButtonIconw} src={leftArrowIcon} alt="Back" />
           </button>
         </div>
