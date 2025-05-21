@@ -1,7 +1,19 @@
 .card {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: 1.5rem;
+  transition: .2s ease-in-out;
+}
+
+.card:hover {
+  background-color: var(--user-card-bg-hover);
+}
+
+.card:active {
+  opacity: 0.7;
 }
 
 .avatar {

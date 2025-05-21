@@ -1,14 +1,29 @@
-import { FC } from "react";
-import s from "./details-page.module.css";
 import defaultAvatar from "@images/default-avatar.png";
-import starIcon from "@images/details/star.svg";
-import phoneIcon from "@images/details/phone.svg";
 import leftArrowIcon from "@images/details/left-arrow.svg";
-import { useNavigate } from "react-router-dom";
+import phoneIcon from "@images/details/phone.svg";
+import starIcon from "@images/details/star.svg";
+import { getSelectedUser } from "@selectors/staff";
+import { useSelector } from "@store";
+import { FC, useMemo } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import s from "./details-page.module.css";
+import { NotFoundPage } from "@pages";
 
 export const DetailsPage: FC = () => {
+  const { id = "none" } = useParams<{ id: string }>();
+
+  const selectUser = useMemo(getSelectedUser, []);
+  const user = useSelector((state) => selectUser(state, id));
+
   const navigate = useNavigate();
   const navigateToBack = () => navigate(-1);
+
+  if (!user) {
+    return <NotFoundPage />;
+  }
+
+  const { firstName, lastName, userTag, position, birthday, phone } =
+    user;
 
   return (
     <section className={s.page}>
@@ -24,10 +39,10 @@ export const DetailsPage: FC = () => {
             <img className={s.avatarImage} src={defaultAvatar} alt="Avatar" />
           </div>
           <div className={s.mainInfo}>
-            <span className={s.userName}>Алиса Иванова</span>
-            <span className={s.userTag}>@aI</span>
+            <span className={s.userName}>{`${firstName} ${lastName}`}</span>
+            <span className={s.userTag}>{userTag}</span>
           </div>
-          <p className={s.userPosition}>Designer</p>
+          <p className={s.userPosition}>{position}</p>
         </div>
       </header>
 
@@ -35,13 +50,13 @@ export const DetailsPage: FC = () => {
         <div className={s.detailsGroup}>
           <div className={s.detailItem}>
             <img src={starIcon} alt="Star" />
-            <span>5 июня 1996</span>
+            <span>{birthday}</span>
           </div>
           <span className={s.userAge}>24 года</span>
         </div>
         <div className={s.detailItem}>
           <img src={phoneIcon} alt="Phone" />
-          <span>+ 7 (999) 900 90 90</span>
+          <span>{phone}</span>
         </div>
       </div>
     </section>

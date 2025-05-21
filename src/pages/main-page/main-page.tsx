@@ -6,7 +6,6 @@ import { Separator } from "@components/separator";
 
 export const MainPage: FC = () => (
   <section className={s.page}>
-    <h1 className={s.title}>Поиск</h1>
     <TopAppBar />
     <Separator />
     <StaffList />
