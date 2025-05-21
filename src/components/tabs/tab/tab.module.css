@@ -2,7 +2,7 @@
   cursor: pointer;
   padding: 0.5rem 0.75rem;
   font-weight: 500;
-  color: var(--tab-text-color);
+  color: var(--gray-text-color);
   user-select: none;
   flex-shrink: 0;
   transition: opacity .2s ease-in-out;

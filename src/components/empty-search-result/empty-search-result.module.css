@@ -13,5 +13,5 @@
 }
 
 .text {
-  color: var(--empty-result-text-color);
+  color: var(--gray-text-color);
 }

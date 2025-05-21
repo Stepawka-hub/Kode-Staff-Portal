@@ -23,7 +23,7 @@
 
 .tag {
   font-size: 0.875rem;
-  color: var(--user-tag-color);
+  color: var(--gray-text-color);
   margin-left: 0.25rem;
 }
 
