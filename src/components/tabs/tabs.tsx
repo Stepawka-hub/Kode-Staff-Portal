@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { getCurrentTab, setCurrentTab } from "@slices/app";
+import { getCurrentTab, setCurrentTab } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
 import { TDepartments } from "src/types/types";
 import { Tab } from "./tab";

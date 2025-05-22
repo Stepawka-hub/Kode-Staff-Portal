@@ -6,10 +6,12 @@ import {
 } from "react-redux";
 import appReducer from "@slices/app";
 import staffReducer from "@slices/staff";
+import searchReducer from "@slices/search";
 
 const rootReducer = combineReducers({
   app: appReducer,
   staff: staffReducer,
+  search: searchReducer
 });
 
 export const store = configureStore({

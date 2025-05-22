@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "@store";
 import { getUsersAsync } from "@thunks/staff";
 import { getError, getIsFetchUsers, getUsers } from "@slices/staff";
 import { UserCard } from "./user-card";
-import { getCurrentTab } from "@slices/app";
+import { getCurrentTab } from "@slices/search";
 import { EmptySearchResult } from "@components/empty-search-result";
 
 export const StaffList: FC = () => {
