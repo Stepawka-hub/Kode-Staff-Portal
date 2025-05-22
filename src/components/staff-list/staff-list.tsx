@@ -1,28 +1,25 @@
-import { FC, useCallback, useEffect } from "react";
+import { EmptySearchResult } from "@components/empty-search-result";
+import { FatalError } from "@components/fatal-error";
+import { useUsersData } from "@hooks/useUsersData";
+import { FC, useMemo } from "react";
 import { SkeletonCard } from "./skeleton-card";
 import s from "./staff-list.module.css";
-import { FatalError } from "@components/fatal-error";
-import { useDispatch, useSelector } from "@store";
-import { getUsersAsync } from "@thunks/staff";
-import { getError, getIsFetchUsers, getUsers } from "@slices/staff";
 import { UserCard } from "./user-card";
-import { getCurrentTab } from "@slices/search";
-import { EmptySearchResult } from "@components/empty-search-result";
+import { useSelector } from "@store";
+import { getSearchQuery } from "@slices/search";
+import { includesRow } from "@utils/helpers/filter";
 
 export const StaffList: FC = () => {
-  const dispatch = useDispatch();
-  const tab = useSelector(getCurrentTab);
-  const users = useSelector(getUsers);
-  const isLoading = useSelector(getIsFetchUsers);
-  const error = useSelector(getError);
+  const { users, isLoading, error, fetchUsers } = useUsersData();
+  const searchQuery = useSelector(getSearchQuery);
 
-  const fetchUsers = useCallback(() => {
-    dispatch(getUsersAsync(tab));
-  }, [dispatch, tab]);
-
-  useEffect(() => {
-    fetchUsers();
-  }, [fetchUsers]);
+  const filteredUsers = useMemo(
+    () =>
+      users.filter((u) =>
+        includesRow(searchQuery, [u.firstName, u.lastName, u.userTag])
+      ),
+    [users, searchQuery]
+  );
 
   if (error) {
     return (
@@ -32,7 +29,7 @@ export const StaffList: FC = () => {
     );
   }
 
-  if (!users.length && !isLoading) {
+  if (!filteredUsers.length && !isLoading) {
     return (
       <section className={s.centeredContainer}>
         <EmptySearchResult />
@@ -44,7 +41,7 @@ export const StaffList: FC = () => {
     <section className={s.list}>
       {isLoading
         ? [...Array(8)].map((_, i) => <SkeletonCard key={i} />)
-        : users.map((u) => <UserCard key={u.id} user={u} />)}
+        : filteredUsers.map((u) => <UserCard key={u.id} user={u} />)}
     </section>
   );
 };
