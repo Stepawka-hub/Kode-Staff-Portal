@@ -1,6 +1,6 @@
+import { IconSearch } from "@components/icons/icon-search";
 import { useDebounce } from "@hooks/useDebounce";
 import listIcon from "@images/search/list.svg";
-import loupeIcon from "@images/search/loupe.svg";
 import { getSearchQuery, setSearchQuery } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
 import { ChangeEvent, FC, useState } from "react";
@@ -23,7 +23,7 @@ export const Search: FC = () => {
   return (
     <div className={s.search}>
       <div className={s.inputContainer}>
-        <img src={loupeIcon} alt="LoupeIcon" />
+        <IconSearch className={s.icon} />
         <input
           className={s.input}
           placeholder="Введи имя, фамилию, тег..."

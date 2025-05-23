@@ -22,3 +22,11 @@
 .input::placeholder {
   color: var(--search-placeholder-color);
 }
+
+.input:focus {
+  caret-color: var(--primary-color);
+}
+
+.inputContainer:focus-within .icon {
+  color: var(--loupe-icon-focus);
+}
