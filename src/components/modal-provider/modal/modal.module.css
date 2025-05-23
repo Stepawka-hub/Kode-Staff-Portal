@@ -1,0 +1,133 @@
+.modalEnter {
+  opacity: 0;
+}
+
+.modalEnterActive {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.modalExit {
+  opacity: 1;
+}
+
+.modalExitActive {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--secondary-color);
+  background-color: var(--modal-bg-color);
+
+  min-width: 25%;
+  min-height: 10rem;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  pointer-events: auto;
+  z-index: 15;
+}
+
+.btnClose {
+  position: absolute;
+  cursor: pointer;
+
+  width: 2rem;
+  height: 2rem;
+  top: -0.75rem;
+  right: -0.75rem;
+
+  background-color: var(--modal-btn-bg-color);
+  border-radius: 50%;
+
+  transition: all 0.25s ease-in;
+}
+
+.btnClose:active {
+  opacity: 0.6;
+}
+
+.btnClose::after,
+.btnClose::before {
+  content: '';
+  position: absolute;
+
+  top: 5px;
+  left: 15px;
+  width: 3px;
+  height: 24px;
+  border-radius: 0.5rem;
+
+  background-color: var(--primary-color);
+  transition: background 0.25s ease-in;
+}
+
+.btnClose::after {
+  transform: rotate(45deg);
+}
+
+.btnClose::before {
+  transform: rotate(-45deg);
+}
+
+.btnClose:hover::after,
+.btnClose:hover::before {
+  background-color: var(--orange-color);
+}
+
+@media (max-width: 960px) {
+  .overlay {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .overlay {
+    padding: 1rem;
+  }
+
+  .content {
+    min-width: 25%;
+    min-height: 7.5rem;
+  
+    padding: 1rem;
+    border-radius: 1rem;
+    pointer-events: auto;
+    z-index: 15;
+  }
+
+  .btnClose {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .btnClose::after,
+  .btnClose::before {
+    top: 5px;
+    left: 13px;
+    width: 3px;
+    height: 19px;
+  }
+}

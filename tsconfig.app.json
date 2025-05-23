@@ -27,6 +27,7 @@
     "paths": {
       "@images/*": ["src/assets/images/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@icons": ["src/components/icons"],
       "@components/*": ["src/components/*"],
       "@pages": ["src/pages"],
       "@selectors/*": ["src/services/selectors/*"],
