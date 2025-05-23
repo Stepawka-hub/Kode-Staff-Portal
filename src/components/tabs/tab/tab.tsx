@@ -9,6 +9,7 @@ export const Tab: FC<TabProps> = ({ text, isActive = true, onClick }) => (
       [s.active]: isActive,
     })}
     onClick={onClick}
+    data-text={text}
   >
     {text}
   </div>

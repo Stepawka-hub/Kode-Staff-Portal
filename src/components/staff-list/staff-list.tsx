@@ -40,7 +40,7 @@ export const StaffList: FC = () => {
   return (
     <section className={s.list}>
       {isLoading
-        ? [...Array(8)].map((_, i) => <SkeletonCard key={i} />)
+        ? [...Array(7)].map((_, i) => <SkeletonCard key={i} />)
         : filteredUsers.map((u) => <UserCard key={u.id} user={u} />)}
     </section>
   );

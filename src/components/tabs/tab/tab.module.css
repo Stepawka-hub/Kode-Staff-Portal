@@ -23,3 +23,12 @@
   border-bottom: 2px solid var(--primary-color);
   pointer-events: none;
 }
+
+.tab::before {
+  display: block;
+  content: attr(data-text);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
