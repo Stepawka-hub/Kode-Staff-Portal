@@ -1,6 +1,8 @@
 import { TDepartments, TSortBy, TUser } from 'src/types/types';
 
-export type TAppState = {};
+export type TAppState = {
+  isInitialized: boolean;
+};
 
 export type TStaffState = {
   users: TUser[];
