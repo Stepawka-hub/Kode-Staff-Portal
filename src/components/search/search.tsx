@@ -26,7 +26,7 @@ export const Search: FC = () => {
         <img src={loupeIcon} alt="LoupeIcon" />
         <input
           className={s.input}
-          placeholder="Введи имя, тег, почту..."
+          placeholder="Введи имя, фамилию, тег..."
           value={value}
           onChange={handleChange}
         />

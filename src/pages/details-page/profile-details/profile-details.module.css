@@ -1,0 +1,26 @@
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+
+.detailsGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.userAge {
+  font-weight: 500;
+  color: var(--gray-text-color);
+}
