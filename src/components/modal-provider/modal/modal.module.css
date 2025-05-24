@@ -34,17 +34,14 @@
 
 .content {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   color: var(--primary-text-color);
   background-color: var(--modal-bg-color);
 
-  min-width: 25%;
+  min-width: 30%;
   min-height: 10rem;
 
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   border-radius: 1.5rem;
   pointer-events: auto;
   z-index: 15;
@@ -94,7 +91,7 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .overlay {
     padding: 1.25rem;
   }
@@ -127,4 +124,4 @@
     width: 3px;
     height: 19px;
   }
-}
+} */
