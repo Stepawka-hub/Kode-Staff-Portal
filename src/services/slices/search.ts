@@ -5,7 +5,7 @@ import { TDepartments, TSortBy } from "@types";
 const initialState: TSearchState = {
   currentTab: "all",
   searchQuery: "",
-  sortBy: "name",
+  sortBy: "asc",
 };
 
 const searchSlice = createSlice({

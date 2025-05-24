@@ -1,11 +1,11 @@
+import { SortSelector } from "@components/sort-selector";
+import { useModal } from "@hooks/useModal";
+import { IconList } from "@icons";
 import { getSearchQuery, setSearchQuery } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
 import { FC, useCallback } from "react";
 import { SearchString } from "./search-string";
 import s from "./search.module.css";
-import { IconList } from "@icons";
-import { useModal } from "@hooks/useModal";
-import { SortForm } from "@components/sort-form";
 
 export const Search: FC = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export const Search: FC = () => {
   }, [dispatch]);
 
   const handleClick = useCallback(() => {
-    showModal(<SortForm />)
+    showModal(<SortSelector />)
   }, [showModal])
 
   return (
