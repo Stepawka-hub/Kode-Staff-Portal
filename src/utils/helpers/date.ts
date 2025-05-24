@@ -7,6 +7,12 @@ export const formatDate = (dateStr: string) =>
     })
     .replace(/\sг\.?$/, "");
 
+export const formatBirthdayShort = (dateStr: string) =>
+  new Date(dateStr).toLocaleDateString("ru-RU", {
+    day: "numeric",
+    month: "short",
+  });
+
 export const getYearsDiff = (
   startDate: string,
   endDate: string | Date = new Date()
@@ -48,4 +54,29 @@ export const getYearsWithText = (date: string): string => {
   }
 
   return `${years} ${ending}`;
+};
+
+export const splitByBirthdayYear = <T extends { birthday: string }>(
+  array: T[]
+) => {
+  const now = new Date();
+  const current: T[] = [];
+  const next: T[] = [];
+
+  array.forEach((e) => {
+    const bday = new Date(e.birthday);
+    const nextBday = new Date(
+      now.getFullYear(),
+      bday.getMonth(),
+      bday.getDate()
+    );
+
+    if (nextBday < now) {
+      next.push(e);
+    } else {
+      current.push(e);
+    }
+  });
+
+  return [current, next];
 };

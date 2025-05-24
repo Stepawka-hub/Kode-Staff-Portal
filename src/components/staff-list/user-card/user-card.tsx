@@ -3,6 +3,7 @@ import s from "./user-card.module.css";
 import { UserCardProps } from "./types";
 import defaultAvatar from "@images/default-avatar.png";
 import { useNavigate } from "react-router-dom";
+import { formatBirthdayShort } from "@utils/helpers/date";
 
 export const UserCard: FC<UserCardProps> = ({ user, showBirthday = false }) => {
   const navigate = useNavigate();
@@ -25,7 +26,9 @@ export const UserCard: FC<UserCardProps> = ({ user, showBirthday = false }) => {
           </div>
           <div className={s.position}>{position}</div>
         </div>
-        {showBirthday && <div className={s.birthday}>{ birthday }</div>}
+        {showBirthday && (
+          <div className={s.birthday}>{formatBirthdayShort(birthday)}</div>
+        )}
       </div>
     </article>
   );
