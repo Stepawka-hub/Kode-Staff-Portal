@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { TAppState } from "./types/types";
 import { initializeApp } from "@thunks/app";
+import { TAppState } from "./types/types";
 
 const initialState: TAppState = {
-  isInitialized: false,
+  isInitialized: false
 };
 
 const appSlice = createSlice({

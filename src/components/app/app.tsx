@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from "@store";
 import { getIsInitialized } from "@slices/app";
 import { initializeApp } from "@thunks/app";
 import { AppPreloader } from "@components/app-preloader";
-import { ModalProvider } from "@components/modal-provider/modal-provider";
+import { AppHeader } from "@components/app-header/app-header";
+import { ModalProvider } from "@providers/modal/modal-provider";
+import { ThemeProvider } from "@providers/theme/theme-provider";
 
 export const App: FC = () => {
   const dispatch = useDispatch();
@@ -17,10 +19,13 @@ export const App: FC = () => {
   }, []);
 
   return (
-    <ModalProvider>
-      <main className={s.content}>
-        {isInitialize ? <RouterProvider router={router} /> : <AppPreloader />}
-      </main>
-    </ModalProvider>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ModalProvider>
+        <AppHeader />
+        <main className={s.content}>
+          {isInitialize ? <RouterProvider router={router} /> : <AppPreloader />}
+        </main>
+      </ModalProvider>
+    </ThemeProvider>
   );
 };

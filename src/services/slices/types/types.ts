@@ -1,4 +1,4 @@
-import { TDepartments, TSortBy, TUser } from 'src/types/types';
+import { TDepartments, TSortBy, TUser } from '@types';
 
 export type TAppState = {
   isInitialized: boolean;

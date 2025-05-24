@@ -9,6 +9,7 @@ export default defineConfig({
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@icons": path.resolve(__dirname, "src/components/icons"),
+      "@providers": path.resolve(__dirname, "src/providers"),
       "@components": path.resolve(__dirname, "src/components"),
       "@pages": path.resolve(__dirname, "src/pages"),
       "@selectors": path.resolve(__dirname, "src/services/selectors"),

@@ -1,8 +1,9 @@
-import { Modal } from "@components/modal-provider/modal";
+import { Modal } from "@components/modal";
 import { memo, ReactNode, useCallback, useMemo, useRef, useState } from "react";
 import { ModalContext } from "./modal-context";
+import { ModalProviderProps } from './types';
 
-export const ModalProvider = memo(({ children }: React.PropsWithChildren) => {
+export const ModalProvider = memo(({ children }: ModalProviderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState<ReactNode | null>(null);
   const nodeRef = useRef<HTMLDivElement>(null);
