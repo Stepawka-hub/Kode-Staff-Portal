@@ -27,8 +27,8 @@ export const Search: FC = () => {
         placeholder="Введи имя, фамилию, тег..."
         onSearch={handleSearch}
       />
-      <button onClick={handleClick}>
-        <IconList />
+      <button className={s.sortBtn} onClick={handleClick}>
+        <IconList className={s.sortIcon} />
       </button>
     </div>
   );

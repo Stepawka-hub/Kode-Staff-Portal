@@ -6,3 +6,16 @@
   border-radius: 1rem;
   background-color: var(--search-bg-color);
 }
+
+.sortBtn {
+  background-color: transparent;
+  transition: .2s ease-in-out;
+}
+
+.sortBtn:hover .sortIcon {
+  color: var(--primary-color);
+}
+
+.sortBtn:active {
+  opacity: 0.8;
+}
