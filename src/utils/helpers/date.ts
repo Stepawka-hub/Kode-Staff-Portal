@@ -80,3 +80,10 @@ export const splitByBirthdayYear = <T extends { birthday: string }>(
 
   return [current, next];
 };
+
+export const compareDatesWithoutYear = (a: string, b: string) => {
+  const dateA = new Date(a);
+  const dateB = new Date(b);
+  const monthDiff = dateA.getMonth() - dateB.getMonth();
+  return monthDiff !== 0 ? monthDiff : dateA.getDate() - dateB.getDate();
+};
