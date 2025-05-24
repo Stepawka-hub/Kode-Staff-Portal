@@ -38,7 +38,8 @@
   color: var(--primary-text-color);
   background-color: var(--modal-bg-color);
 
-  min-width: 30%;
+  width: 100%;
+  max-width: 30rem;
   min-height: 10rem;
 
   padding: 1.5rem 1rem;
@@ -91,7 +92,7 @@
   transform: scale(1.1);
 }
 
-/* @media (max-width: 960px) {
+@media (max-width: 960px) {
   .overlay {
     padding: 1.25rem;
   }
@@ -103,25 +104,6 @@
   }
 
   .content {
-    min-width: 25%;
     min-height: 7.5rem;
-  
-    padding: 1rem;
-    border-radius: 1rem;
-    pointer-events: auto;
-    z-index: 15;
   }
-
-  .btnClose {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-
-  .btnClose::after,
-  .btnClose::before {
-    top: 5px;
-    left: 13px;
-    width: 3px;
-    height: 19px;
-  }
-} */
+}
