@@ -9,7 +9,7 @@ export const formatDate = (dateStr: string) =>
 
 export const getYearsDiff = (
   startDate: string,
-  endDate: Date = new Date()
+  endDate: string | Date = new Date()
 ): number => {
   const start = new Date(startDate);
   const end = new Date(endDate);

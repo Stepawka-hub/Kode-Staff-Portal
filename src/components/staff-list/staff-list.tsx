@@ -1,17 +1,19 @@
 import { EmptySearchResult } from "@components/empty-search-result";
 import { FatalError } from "@components/fatal-error";
 import { useUsersData } from "@hooks/useUsersData";
+import { getSearchQuery, getSortBy } from "@slices/search";
+import { useSelector } from "@store";
+import { includesRow } from "@utils/helpers/filter";
 import { FC, useMemo } from "react";
+import { BirthdayList } from "./birthday-list";
+import { FlatList } from "./flat-list";
 import { SkeletonCard } from "./skeleton-card";
 import s from "./staff-list.module.css";
-import { UserCard } from "./user-card";
-import { useSelector } from "@store";
-import { getSearchQuery } from "@slices/search";
-import { includesRow } from "@utils/helpers/filter";
 
 export const StaffList: FC = () => {
   const { users, isLoading, error, fetchUsers } = useUsersData();
   const searchQuery = useSelector(getSearchQuery);
+  const sortBy = useSelector(getSortBy);
 
   const filteredUsers = useMemo(
     () =>
@@ -20,6 +22,10 @@ export const StaffList: FC = () => {
       ),
     [users, searchQuery]
   );
+
+  if (isLoading) {
+    return [...Array(7)].map((_, i) => <SkeletonCard key={i} />);
+  }
 
   if (error) {
     return (
@@ -39,9 +45,11 @@ export const StaffList: FC = () => {
 
   return (
     <section className={s.list}>
-      {isLoading
-        ? [...Array(7)].map((_, i) => <SkeletonCard key={i} />)
-        : filteredUsers.map((u) => <UserCard key={u.id} user={u} />)}
+      {sortBy === "asc" ? (
+        <FlatList users={filteredUsers} />
+      ) : (
+        <BirthdayList users={filteredUsers} />
+      )}
     </section>
   );
 };

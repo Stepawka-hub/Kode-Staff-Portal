@@ -10,15 +10,15 @@ import s from "./search.module.css";
 export const Search: FC = () => {
   const dispatch = useDispatch();
   const searchQuery = useSelector(getSearchQuery);
-  const { showModal } = useModal();
+  const { showModal, hideModal } = useModal();
 
   const handleSearch = useCallback((query: string) => {
     dispatch(setSearchQuery(query));
   }, [dispatch]);
 
   const handleClick = useCallback(() => {
-    showModal(<SortSelector />)
-  }, [showModal])
+    showModal(<SortSelector callback={hideModal} />)
+  }, [showModal, hideModal])
 
   return (
     <div className={s.search}>

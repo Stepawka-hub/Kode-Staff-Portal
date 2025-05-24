@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from "@store";
 import { TSortBy } from "@types";
 import { ChangeEvent, FC } from "react";
 import s from "./sort-selector.module.css";
+import { SortSelectorProps } from './types';
 
-export const SortSelector: FC = () => {
+export const SortSelector: FC<SortSelectorProps> = ({ callback }) => {
   const dispatch = useDispatch();
   const sortBy = useSelector(getSortBy);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value as TSortBy;
     dispatch(setSortBy(value));
+    callback();
   };
 
   return (
