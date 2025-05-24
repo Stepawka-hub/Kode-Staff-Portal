@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(5, 5, 16, 0.16);
 
   top: 0;
   bottom: 0;
@@ -38,14 +38,14 @@
   justify-content: center;
   align-items: center;
 
-  color: var(--secondary-color);
+  color: var(--primary-text-color);
   background-color: var(--modal-bg-color);
 
   min-width: 25%;
   min-height: 10rem;
 
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   pointer-events: auto;
   z-index: 15;
 }
@@ -56,10 +56,10 @@
 
   width: 2rem;
   height: 2rem;
-  top: -0.75rem;
-  right: -0.75rem;
+  top: 1.5rem;
+  right: 1.5rem;
 
-  background-color: var(--modal-btn-bg-color);
+  background-color: var(--modal-close-btn-color);
   border-radius: 50%;
 
   transition: all 0.25s ease-in;
@@ -73,28 +73,25 @@
 .btnClose::before {
   content: '';
   position: absolute;
-
-  top: 5px;
-  left: 15px;
-  width: 3px;
-  height: 24px;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 1.25rem;
   border-radius: 0.5rem;
 
-  background-color: var(--primary-color);
-  transition: background 0.25s ease-in;
+  background-color: var(--modal-close-icon-color);
 }
 
 .btnClose::after {
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .btnClose::before {
-  transform: rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.btnClose:hover::after,
-.btnClose:hover::before {
-  background-color: var(--orange-color);
+.btnClose:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 960px) {

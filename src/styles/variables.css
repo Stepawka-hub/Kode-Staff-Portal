@@ -18,4 +18,8 @@
   --details-header-bg-color: #f7f7f8;
   --details-button-bg-color: #fff;
   --details-button-border-color: #050510;
+
+  --modal-bg-color: #fff;
+  --modal-close-icon-color: #C3C3C6;
+  --modal-close-btn-color: #F7F7F8;
 }
