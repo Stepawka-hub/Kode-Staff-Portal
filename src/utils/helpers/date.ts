@@ -1,0 +1,89 @@
+export const formatDate = (dateStr: string) =>
+  new Date(dateStr)
+    .toLocaleDateString("ru-RU", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(/\sг\.?$/, "");
+
+export const formatBirthdayShort = (dateStr: string) =>
+  new Date(dateStr).toLocaleDateString("ru-RU", {
+    day: "numeric",
+    month: "short",
+  });
+
+export const getYearsDiff = (
+  startDate: string,
+  endDate: string | Date = new Date()
+): number => {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  let years = end.getFullYear() - start.getFullYear();
+  const mDiff = end.getMonth() - start.getMonth();
+  if (mDiff <= 0 || (mDiff === 0 && end.getDate() < start.getDate())) {
+    years--;
+  }
+
+  return years;
+};
+
+export const getYearsWithText = (date: string): string => {
+  const years = getYearsDiff(date);
+
+  const lastDigit = years % 10;
+  const lastTwoDigits = years % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    return `${years} лет`;
+  }
+
+  let ending: string;
+  switch (lastDigit) {
+    case 1:
+      ending = "год";
+      break;
+    case 2:
+    case 3:
+    case 4:
+      ending = "года";
+      break;
+    default:
+      ending = "лет";
+  }
+
+  return `${years} ${ending}`;
+};
+
+export const splitByBirthdayYear = <T extends { birthday: string }>(
+  array: T[]
+) => {
+  const now = new Date();
+  const current: T[] = [];
+  const next: T[] = [];
+
+  array.forEach((e) => {
+    const bday = new Date(e.birthday);
+    const nextBday = new Date(
+      now.getFullYear(),
+      bday.getMonth(),
+      bday.getDate()
+    );
+
+    if (nextBday < now) {
+      next.push(e);
+    } else {
+      current.push(e);
+    }
+  });
+
+  return [current, next];
+};
+
+export const compareDatesWithoutYear = (a: string, b: string) => {
+  const dateA = new Date(a);
+  const dateB = new Date(b);
+  const monthDiff = dateA.getMonth() - dateB.getMonth();
+  return monthDiff !== 0 ? monthDiff : dateA.getDate() - dateB.getDate();
+};

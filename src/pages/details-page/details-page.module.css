@@ -1,0 +1,29 @@
+.header {
+  padding: 1.5rem;
+  background-color: var(--details-header-bg-color);
+}
+
+.controls {
+  padding: 0.75rem 0;
+  margin-bottom: 0.75rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--details-button-border-color);
+  background-color: var(--details-button-bg-color);
+  transition: all .2s ease-in-out;
+}
+
+.backButton:hover {
+  transform: scale(1.075);
+}
+
+.backButton:active {
+  opacity: 0.7;
+}

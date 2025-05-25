@@ -1,0 +1,1 @@
+export { TextDivider } from './text-divider';

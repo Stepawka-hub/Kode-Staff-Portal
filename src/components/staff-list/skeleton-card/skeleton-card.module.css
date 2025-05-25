@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: 1.5rem;
+}
+
+.avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-image: var(--skeleton-card-background);
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.firstLine,
+.secondLine {
+  border-radius: 1rem;
+  background-image: var(--skeleton-card-background);
+}
+
+.firstLine {
+  width: 9rem;
+  height: 1rem;
+}
+
+.secondLine {
+  width: 5rem;
+  height: 0.75rem;
+}

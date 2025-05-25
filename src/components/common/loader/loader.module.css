@@ -1,0 +1,9 @@
+.container {
+  text-align: center;
+  animation: alternate-reverse .2s ;
+}
+
+.loader {
+  width: 4.5rem;
+  height: 4.5rem;
+}

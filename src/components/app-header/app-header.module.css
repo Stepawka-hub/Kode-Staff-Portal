@@ -1,0 +1,16 @@
+.header {
+  padding: 1rem;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.select {
+  padding: 0.25rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+}

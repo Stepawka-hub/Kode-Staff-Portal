@@ -1,0 +1,31 @@
+export const DEPARTMENTS = {
+  ALL: "all",
+  ANDROID: "android",
+  IOS: "ios",
+  DESIGN: "design",
+  MANAGEMENT: "management",
+  QA: "qa",
+  BACK_OFFICE: "back_office",
+  FRONTEND: "frontend",
+  HR: "hr",
+  PR: "pr",
+  BACKEND: "backend",
+  SUPPORT: "support",
+  ANALYTICS: "analytics",
+} as const;
+
+export const tabs = [
+  { id: DEPARTMENTS.ALL, label: "Все" },
+  { id: DEPARTMENTS.ANDROID, label: "Android" },
+  { id: DEPARTMENTS.IOS, label: "iOS" },
+  { id: DEPARTMENTS.DESIGN, label: "Дизайн" },
+  { id: DEPARTMENTS.MANAGEMENT, label: "Менеджмент" },
+  { id: DEPARTMENTS.QA, label: "QA" },
+  { id: DEPARTMENTS.BACK_OFFICE, label: "Бэк-офис" },
+  { id: DEPARTMENTS.FRONTEND, label: "Frontend" },
+  { id: DEPARTMENTS.HR, label: "HR" },
+  { id: DEPARTMENTS.PR, label: "PR" },
+  { id: DEPARTMENTS.BACKEND, label: "Backend" },
+  { id: DEPARTMENTS.SUPPORT, label: "Техподдержка" },
+  { id: DEPARTMENTS.ANALYTICS, label: "Аналитика" },
+] as const;
