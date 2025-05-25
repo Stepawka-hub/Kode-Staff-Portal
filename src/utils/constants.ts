@@ -29,3 +29,4 @@ export const tabs = [
   { id: DEPARTMENTS.SUPPORT, label: "Техподдержка" },
   { id: DEPARTMENTS.ANALYTICS, label: "Аналитика" },
 ] as const;
+

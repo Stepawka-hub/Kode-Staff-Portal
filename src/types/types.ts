@@ -15,3 +15,8 @@ export type TUser = {
   birthday: string;
   phone: string;
 };
+
+export type TUserCache = {
+  data: TUser[];
+  timestamp: number;
+}

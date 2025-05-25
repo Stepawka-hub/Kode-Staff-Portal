@@ -1,12 +1,12 @@
 import { Search } from "@components/search";
 import { Tabs } from "@components/tabs";
+import { useNetwork } from "@hooks/useNetwork";
+import { getCurrentTab } from "@slices/search";
+import { useDispatch, useSelector } from "@store";
+import clsx from "clsx";
 import { FC, useCallback } from "react";
 import s from "./top-app-bar.module.css";
-import { useNetwork } from "@hooks/useNetwork";
-import { useDispatch, useSelector } from "@store";
 import { getUsersAsync } from "@thunks/staff";
-import { getCurrentTab } from "@slices/search";
-import clsx from "clsx";
 
 export const TopAppBar: FC = () => {
   const dispatch = useDispatch();

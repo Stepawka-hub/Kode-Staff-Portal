@@ -1,5 +1,13 @@
-.light {
+:root {
   --primary-color: #6534FF;
+
+  --details-button-bg-color: #fff;
+
+  --network-message-color: #fff;
+  --error-color: #F44336;
+}
+
+.light {
   --secondary-color: #fff;
   --primary-text-color: #050510;
   --gray-text-color: #97979B;
@@ -18,7 +26,6 @@
   --user-birthday-color: #55555C;
 
   --details-header-bg-color: #f7f7f8;
-  --details-button-bg-color: #fff;
   --details-button-border-color: #050510;
   --details-icon-color: #050510;
 
@@ -27,13 +34,9 @@
   --modal-close-btn-color: #F7F7F8;
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
   --overlay-color: rgba(5, 5, 16, 0.16);
-
-  --network-message-color: #fff;
-  --error-color: #F44336;
 }
 
 .dark {
-  --primary-color: #6534FF;
   --secondary-color: #272727;
   --primary-text-color: #ffffff;
   --gray-text-color: #cdcdcd;
@@ -52,7 +55,6 @@
   --user-birthday-color: #727275;
 
   --details-header-bg-color: #171717;
-  --details-button-bg-color: #fff;
   --details-button-border-color: #fff;
   --details-icon-color: #fff;
 
@@ -61,7 +63,4 @@
   --modal-close-btn-color: #F7F7F8;
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
   --overlay-color: rgba(5, 5, 5, 0.3);
-
-  --network-message-color: #fff;
-  --error-color: #F44336;
 }

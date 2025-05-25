@@ -7,12 +7,21 @@ const initialState: TStaffState = {
   users: [],
   isFetchUsers: false,
   error: null,
+  cache: {},
 };
 
 const staffSlice = createSlice({
   name: "staff",
   initialState,
-  reducers: {},
+  reducers: {
+    setCache: (
+      state,
+      { payload }: PayloadAction<{ key: string; data: TUser[] }>
+    ) => {
+      const { key, data } = payload;
+      state.cache[key] = { data, timestamp: Date.now() };
+    },
+  },
   selectors: {
     getUsers: (state) => state.users,
     getIsFetchUsers: (state) => state.isFetchUsers,
@@ -41,3 +50,4 @@ const staffSlice = createSlice({
 
 export default staffSlice.reducer;
 export const { getUsers, getIsFetchUsers, getError } = staffSlice.selectors;
+export const { setCache } = staffSlice.actions;
