@@ -20,12 +20,16 @@ export const App: FC = () => {
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-      <ModalProvider>
-        <AppHeader />
-        <main className={s.content}>
-          {isInitialize ? <RouterProvider router={router} /> : <AppPreloader />}
-        </main>
-      </ModalProvider>
+      {!isInitialize ? (
+        <AppPreloader />
+      ) : (
+        <ModalProvider>
+          <AppHeader />
+          <main className={s.content}>
+            <RouterProvider router={router} />
+          </main>
+        </ModalProvider>
+      )}
     </ThemeProvider>
   );
 };
