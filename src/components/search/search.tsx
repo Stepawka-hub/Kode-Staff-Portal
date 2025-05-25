@@ -3,11 +3,11 @@ import { useModal } from "@hooks/useModal";
 import { IconList } from "@icons";
 import { getSearchQuery, setSearchQuery } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
-import { FC, useCallback } from "react";
+import { FC, memo, useCallback } from "react";
 import { SearchString } from "./search-string";
 import s from "./search.module.css";
 
-export const Search: FC = () => {
+export const Search: FC = memo(() => {
   const dispatch = useDispatch();
   const searchQuery = useSelector(getSearchQuery);
   const { showModal, hideModal } = useModal();
@@ -32,4 +32,4 @@ export const Search: FC = () => {
       </button>
     </div>
   );
-};
+});

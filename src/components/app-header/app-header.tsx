@@ -8,7 +8,6 @@ export const AppHeader: FC = () => {
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value as Theme;
-    console.log(value);
     setTheme(value);
   };
 

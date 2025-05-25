@@ -25,7 +25,7 @@ export const ProfileDetails: FC<ProfileDetailsProps> = ({
       </div>
       <div className={s.detailItem}>
         <IconPhone className={s.icon} />
-        <span>{formattedPhone}</span>
+        <a href={`tel:${phone}`} className={s.link}>{formattedPhone}</a>
       </div>
     </div>
   );

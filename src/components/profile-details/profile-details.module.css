@@ -28,3 +28,17 @@
 .icon {
   color: var(--details-icon-color);
 }
+
+.link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  transition: opacity .2s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link:active {
+  opacity: 0.7;
+}

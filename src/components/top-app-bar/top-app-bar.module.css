@@ -1,4 +1,11 @@
 .header {
+}
+
+.search {
+  padding: 1rem;
+}
+
+.tabs {
   padding: 0 1rem;
 }
 
@@ -7,4 +14,23 @@
   font-weight: bold;
   margin: 0.5rem 0 0.75rem 0.5rem;
   color: var(--primary-text-color);
+}
+
+.search.offline {
+  background-color: var(--error-color);
+}
+
+.search.reconnect {
+  background-color: var(--primary-color);
+}
+
+
+.search.reconnect .title,
+.search.offline .title,
+.networkMessage {
+  color: var(--network-message-color);
+}
+
+.networkMessage {
+  margin-left: 0.5rem;
 }

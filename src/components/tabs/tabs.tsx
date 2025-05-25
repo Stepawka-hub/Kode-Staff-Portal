@@ -1,14 +1,14 @@
+import { setCurrentTab } from "@slices/search";
+import { useDispatch } from "@store";
+import { tabs } from "@utils/constants";
 import { FC } from "react";
-import { getCurrentTab, setCurrentTab } from "@slices/search";
-import { useDispatch, useSelector } from "@store";
 import { TDepartments } from "src/types/types";
 import { Tab } from "./tab";
-import { tabs } from "@utils/constants";
 import s from "./tabs.module.css";
+import { TabsProps } from "./types";
 
-export const Tabs: FC = () => {
+export const Tabs: FC<TabsProps> = ({ currentTab }) => {
   const dispatch = useDispatch();
-  const currentTab = useSelector(getCurrentTab);
 
   const handleTabClick = (tab: TDepartments) => () => {
     dispatch(setCurrentTab(tab));

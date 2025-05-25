@@ -27,6 +27,9 @@
   --modal-close-btn-color: #F7F7F8;
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
   --overlay-color: rgba(5, 5, 16, 0.16);
+
+  --network-message-color: #fff;
+  --error-color: #F44336;
 }
 
 .dark {
@@ -58,4 +61,7 @@
   --modal-close-btn-color: #F7F7F8;
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
   --overlay-color: rgba(5, 5, 5, 0.3);
+
+  --network-message-color: #fff;
+  --error-color: #F44336;
 }
