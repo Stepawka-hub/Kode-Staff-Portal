@@ -7,6 +7,7 @@
 
 .input {
   width: 100%;
+  color: var(--primary-text-color);
   background-color: var(--search-bg-color);
 }
 

@@ -6,9 +6,9 @@ import { Separator } from "../separator";
 export const TextDivider: FC<TextDividerProps> = ({ text }) => {
   return (
     <div className={s.divider}>
-      <Separator />
+      <Separator className={s.separator} />
       <span className={s.text}>{text}</span>
-      <Separator />
+      <Separator className={s.separator} />
     </div>
   );
 };

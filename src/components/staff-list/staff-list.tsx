@@ -23,10 +23,6 @@ export const StaffList: FC = () => {
     [users, searchQuery]
   );
 
-  if (isLoading) {
-    return [...Array(7)].map((_, i) => <SkeletonCard key={i} />);
-  }
-
   if (error) {
     return (
       <section className={s.centeredContainer}>
@@ -45,7 +41,9 @@ export const StaffList: FC = () => {
 
   return (
     <section className={s.list}>
-      {sortBy === "asc" ? (
+      {isLoading ? (
+        [...Array(7)].map((_, i) => <SkeletonCard key={i} />)
+      ) : sortBy === "asc" ? (
         <FlatList users={filteredUsers} />
       ) : (
         <BirthdayList users={filteredUsers} />

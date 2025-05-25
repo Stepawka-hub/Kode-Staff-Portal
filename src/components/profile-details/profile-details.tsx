@@ -1,13 +1,10 @@
-import phoneIcon from "@images/details/phone.svg";
-import starIcon from "@images/details/star.svg";
-import {
-  formatDate,
-  getYearsWithText
-} from "@utils/helpers/date";
+import { formatDate, getYearsWithText } from "@utils/helpers/date";
 import { FC, useMemo } from "react";
 import s from "./profile-details.module.css";
 import { ProfileDetailsProps } from "./types";
-import { formatPhoneNumber } from '@utils/helpers/phone-number';
+import { formatPhoneNumber } from "@utils/helpers/phone-number";
+import { IconStar } from "@components/icons/icon-star";
+import { IconPhone } from "@components/icons/icon-phone";
 
 export const ProfileDetails: FC<ProfileDetailsProps> = ({
   birthday,
@@ -21,13 +18,13 @@ export const ProfileDetails: FC<ProfileDetailsProps> = ({
     <div className={s.profileDetails}>
       <div className={s.detailsGroup}>
         <div className={s.detailItem}>
-          <img src={starIcon} alt="Star" />
+          <IconStar className={s.icon} />
           <span>{formattedDate}</span>
         </div>
         <span className={s.userAge}>{years}</span>
       </div>
       <div className={s.detailItem}>
-        <img src={phoneIcon} alt="Phone" />
+        <IconPhone className={s.icon} />
         <span>{formattedPhone}</span>
       </div>
     </div>

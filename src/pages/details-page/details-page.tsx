@@ -5,8 +5,8 @@ import { FC, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import s from "./details-page.module.css";
 import { NotFoundPage } from "@pages";
-import { ProfileDetails } from "./profile-details";
-import { ProfileUser } from "./profile-user";
+import { ProfileDetails } from "@components/profile-details";
+import { ProfileUser } from "@components/profile-user";
 
 export const DetailsPage: FC = () => {
   const { id = "none" } = useParams<{ id: string }>();

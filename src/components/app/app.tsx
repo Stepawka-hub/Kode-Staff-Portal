@@ -19,7 +19,7 @@ export const App: FC = () => {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <ModalProvider>
         <AppHeader />
         <main className={s.content}>

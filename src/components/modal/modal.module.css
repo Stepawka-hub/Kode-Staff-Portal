@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: rgba(5, 5, 16, 0.16);
+  background-color: var(--overlay-color);
 
   top: 0;
   bottom: 0;
@@ -37,12 +37,13 @@
 
   color: var(--primary-text-color);
   background-color: var(--modal-bg-color);
+  box-shadow: 0 2px 8px var(--modal-shadow-color);
 
   width: 100%;
   max-width: 30rem;
   min-height: 10rem;
 
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 2rem;
   border-radius: 1.5rem;
   pointer-events: auto;
   z-index: 15;

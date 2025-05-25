@@ -8,5 +8,9 @@
   font-size: 0.9375rem;
   font-weight: 500;
   padding: 0 5rem;
-  color: var(--separator-color);
+  color: var(--text-divider-color);
+}
+
+.separator {
+  background-color: var(--text-divider-color);
 }

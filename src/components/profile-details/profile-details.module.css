@@ -24,3 +24,7 @@
   font-weight: 500;
   color: var(--gray-text-color);
 }
+
+.icon {
+  color: var(--details-icon-color);
+}
