@@ -1,6 +1,6 @@
 import { DEPARTMENTS } from "@utils/constants";
 
-export type TDepartments = (typeof DEPARTMENTS)[keyof typeof DEPARTMENTS];
+export type TDepartments = typeof DEPARTMENTS[number];
 
 export type TSortBy = 'asc' | 'birthday';
 

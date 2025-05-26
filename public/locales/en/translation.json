@@ -11,6 +11,21 @@
       "reconnecting": "Let me load in a second..."
     }
   },
+  "tabs": {
+    "all": "All",
+    "android": "Android",
+    "ios": "iOS",
+    "design": "Design",
+    "management": "Management",
+    "qa": "QA",
+    "back_office": "Back Office",
+    "frontend": "Frontend",
+    "hr": "HR",
+    "pr": "PR",
+    "backend": "Backend",
+    "support": "Support",
+    "analytics": "Analytics"
+  },
   "search": {
     "placeholder": "Enter first name, last name, tag..."
   },
