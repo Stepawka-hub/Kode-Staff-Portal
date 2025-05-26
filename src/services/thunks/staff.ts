@@ -21,9 +21,9 @@ export const getUsersAsync = createAsyncThunk<TUser[], TDepartments>(
     }
 
     try {
-      const { items } = await getUsers(tab);
-      dispatch(setCache({ key: tab, data: items }));
-      return items;
+      const users = await getUsers(tab);
+      dispatch(setCache({ key: tab, data: users }));
+      return users;
     } catch (err) {
       return rejectWithValue(getErrorMessage(err));
     }
