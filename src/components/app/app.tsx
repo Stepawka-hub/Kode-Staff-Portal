@@ -1,5 +1,5 @@
 import { router } from "@routes";
-import { FC, useEffect } from "react";
+import { FC, Suspense, useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
 import s from "./app.module.css";
 import { useDispatch, useSelector } from "@store";
@@ -33,3 +33,9 @@ export const App: FC = () => {
     </ThemeProvider>
   );
 };
+
+export const WrappedApp: FC = () => (
+  <Suspense fallback="...loading">
+    <App />
+  </Suspense>
+);

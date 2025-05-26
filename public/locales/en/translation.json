@@ -1,0 +1,22 @@
+{
+  "app": {
+    "preloader": {
+      "text": "The application is loading..."
+    }
+  },
+  "top-app-bar": {
+    "title": "Search",
+    "network": {
+      "offline": "I can't update the data. Check your internet connection.",
+      "reconnecting": "Let me load in a second..."
+    }
+  },
+  "search": {
+    "placeholder": "Enter first name, last name, tag..."
+  },
+  "sort": {
+    "title": "Sort",
+    "asc": "Alphabetically",
+    "birthday": "By birthday"
+  }
+}

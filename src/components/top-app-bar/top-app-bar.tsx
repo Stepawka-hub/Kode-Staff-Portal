@@ -7,10 +7,12 @@ import clsx from "clsx";
 import { FC, useCallback } from "react";
 import s from "./top-app-bar.module.css";
 import { getUsersAsync } from "@thunks/staff";
+import { useTranslation } from 'react-i18next';
 
 export const TopAppBar: FC = () => {
   const dispatch = useDispatch();
   const tab = useSelector(getCurrentTab);
+  const {t} = useTranslation();
 
   const fetchUsers = useCallback(async () => {
     await dispatch(getUsersAsync(tab));
@@ -26,15 +28,18 @@ export const TopAppBar: FC = () => {
           [s.reconnect]: isReconnecting,
         })}
       >
-        <h1 className={s.title}>Поиск</h1>
+        <h1 className={s.title}>{t('top-app-bar.title')}</h1>
+
         {!isOnline && (
           <p className={s.networkMessage}>
-            Не могу обновить данные. Проверь соединение с интернетом.
+            {t('top-app-bar.network.offline')}
           </p>
         )}
+
         {isReconnecting && (
-          <p className={s.networkMessage}>Секундочку гружусь...</p>
+          <p className={s.networkMessage}>{t('top-app-bar.network.reconnecting')}</p>
         )}
+        
         {isOnline && !isReconnecting && <Search />}
       </div>
       <div className={s.tabs}>
