@@ -23,7 +23,7 @@ export const StaffList: FC = () => {
     [users, searchQuery]
   );
 
-  if (error) {
+  if (!error) {
     return (
       <section className={s.centeredContainer}>
         <FatalError callback={fetchUsers} />

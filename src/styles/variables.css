@@ -1,6 +1,4 @@
 :root {
-  --primary-color: #6534FF;
-
   --details-button-bg-color: #fff;
 
   --network-message-color: #fff;
@@ -8,6 +6,7 @@
 }
 
 .light {
+  --primary-color: #6534FF;
   --secondary-color: #fff;
   --primary-text-color: #050510;
   --gray-text-color: #97979B;
@@ -37,6 +36,7 @@
 }
 
 .dark {
+  --primary-color: #7b55f7;
   --secondary-color: #272727;
   --primary-text-color: #ffffff;
   --gray-text-color: #cdcdcd;

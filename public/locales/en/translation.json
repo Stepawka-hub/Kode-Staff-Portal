@@ -18,5 +18,29 @@
     "title": "Sort",
     "asc": "Alphabetically",
     "birthday": "By birthday"
+  },
+  "language-switcher": {
+    "label-group": "Language",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "theme-switcher": {
+    "label-group": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "empty-search-result": {
+    "title": "We didn't find anyone",
+    "text": "Try to adjust the request"
+  },
+  "fatal-error": {
+    "title": "Some superintelligence broke everything",
+    "text": "We'll try to fix it quickly",
+    "btn-text": "Try again"
+  },
+  "not-found": {
+    "text": "Nothing found!",
+    "btn-text": "Return to home"
   }
 }

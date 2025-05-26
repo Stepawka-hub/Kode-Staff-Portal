@@ -1,6 +1,3 @@
-.header {
-}
-
 .search {
   padding: 1rem;
 }
@@ -23,7 +20,6 @@
 .search.reconnect {
   background-color: var(--primary-color);
 }
-
 
 .search.reconnect .title,
 .search.offline .title,
