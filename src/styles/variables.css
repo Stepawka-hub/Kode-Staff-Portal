@@ -11,6 +11,9 @@
   --primary-text-color: #050510;
   --gray-text-color: #97979B;
 
+  --select-bg-color: #fff;
+  --select-border-color: #171717;
+
   --search-bg-color: #F7F7F8;
   --search-placeholder-color: #C3C3C6;
   --default-icon-color: #C3C3C6;
@@ -40,6 +43,9 @@
   --secondary-color: #272727;
   --primary-text-color: #ffffff;
   --gray-text-color: #cdcdcd;
+
+  --select-bg-color: #171717;
+  --select-border-color: #171717;
 
   --search-bg-color: #171717;
   --search-placeholder-color: #a2a2a2;

@@ -11,6 +11,6 @@ const api = axios.create({
 export const getUsers = async (
   tab: TDepartments
 ): Promise<TGetUserResponse> => {
-  const res = await api.get(`users?__example=${tab}`);
+  const res = await api.get(`users?__example=${tab}&__dynamic=true`);
   return res.data;
 };

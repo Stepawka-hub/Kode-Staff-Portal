@@ -35,7 +35,7 @@ export const App: FC = () => {
 };
 
 export const WrappedApp: FC = () => (
-  <Suspense fallback="...loading">
+  <Suspense fallback={<AppPreloader />}>
     <App />
   </Suspense>
 );
