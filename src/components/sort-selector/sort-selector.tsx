@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from "@store";
 import { TSortBy } from "@types";
 import { ChangeEvent, FC } from "react";
 import s from "./sort-selector.module.css";
-import { SortSelectorProps } from './types';
+import { SortSelectorProps } from "./types";
+import { useTranslation } from "react-i18next";
 
 export const SortSelector: FC<SortSelectorProps> = ({ callback }) => {
   const dispatch = useDispatch();
   const sortBy = useSelector(getSortBy);
+  const { t } = useTranslation();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value as TSortBy;
@@ -16,8 +18,8 @@ export const SortSelector: FC<SortSelectorProps> = ({ callback }) => {
   };
 
   return (
-    <div role="radiogroup" aria-label="Сортировка">
-      <h2 className={s.title}>Сортировка</h2>
+    <div role="radiogroup" aria-label={t('sort.title')}>
+      <h2 className={s.title}>{t("sort.title")}</h2>
       <fieldset className={s.fieldset}>
         <div className={s.radio}>
           <input
@@ -30,7 +32,7 @@ export const SortSelector: FC<SortSelectorProps> = ({ callback }) => {
             checked={sortBy === "asc"}
           />
           <label htmlFor="asc" className={s.label}>
-            По алфавиту
+            {t("sort.asc")}
           </label>
         </div>
         <div className={s.radio}>
@@ -44,7 +46,7 @@ export const SortSelector: FC<SortSelectorProps> = ({ callback }) => {
             checked={sortBy === "birthday"}
           />
           <label htmlFor="birthday" className={s.label}>
-            По дню рождения
+            {t("sort.birthday")}
           </label>
         </div>
       </fieldset>

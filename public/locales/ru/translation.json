@@ -1,0 +1,61 @@
+{
+  "app": {
+    "preloader": {
+      "text": "Приложение загружается..."
+    }
+  },
+  "top-app-bar": {
+    "title": "Поиск",
+    "network": {
+      "offline": "Не могу обновить данные. Проверь соединение с интернетом.",
+      "reconnecting": "Секундочку гружусь..."
+    }
+  },
+  "tabs": {
+    "all": "Все",
+    "android": "Android",
+    "ios": "iOS",
+    "design": "Дизайн",
+    "management": "Менеджмент",
+    "qa": "QA",
+    "back_office": "Бэк-офис",
+    "frontend": "Frontend",
+    "hr": "HR",
+    "pr": "PR",
+    "backend": "Backend",
+    "support": "Техподдержка",
+    "analytics": "Аналитика"
+  },
+  "search": {
+    "placeholder": "Введи имя, фамилию, тег..."
+  },
+  "sort": {
+    "title": "Сортировка",
+    "asc": "По алфавиту",
+    "birthday": "По дню рождения"
+  },
+  "language-switcher": {
+    "label-group": "Язык",
+    "ru": "Русский",
+    "en": "Английский"
+  },
+  "theme-switcher": {
+    "label-group": "Тема",
+    "dark": "Тёмная",
+    "light": "Светлая",
+    "system": "Системная"
+  },
+  "empty-search-result": {
+    "title": "Мы никого не нашли",
+    "text": "Попробуй скорректировать запрос"
+  },
+  "fatal-error": {
+    "title": "Какой-то сверхразум все сломал",
+    "text": "Постараемся быстро починить",
+    "btn-text": "Попробовать снова"
+  },
+  "not-found": {
+    "text": "Ничего не найдено!",
+    "btn-text": "Вернуться на главную"
+  }
+}

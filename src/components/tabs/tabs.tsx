@@ -1,14 +1,16 @@
+import { setCurrentTab } from "@slices/search";
+import { useDispatch } from "@store";
+import { DEPARTMENTS as tabs } from "@utils/constants";
 import { FC } from "react";
-import { getCurrentTab, setCurrentTab } from "@slices/search";
-import { useDispatch, useSelector } from "@store";
 import { TDepartments } from "src/types/types";
 import { Tab } from "./tab";
-import { tabs } from "@utils/constants";
 import s from "./tabs.module.css";
+import { TabsProps } from "./types";
+import { useTranslation } from 'react-i18next';
 
-export const Tabs: FC = () => {
+export const Tabs: FC<TabsProps> = ({ currentTab }) => {
   const dispatch = useDispatch();
-  const currentTab = useSelector(getCurrentTab);
+  const {t} = useTranslation();
 
   const handleTabClick = (tab: TDepartments) => () => {
     dispatch(setCurrentTab(tab));
@@ -16,12 +18,12 @@ export const Tabs: FC = () => {
 
   return (
     <div className={s.tabs}>
-      {tabs.map((t) => (
+      {tabs.map((tabId) => (
         <Tab
-          key={t.id}
-          text={t.label}
-          isActive={t.id === currentTab}
-          onClick={handleTabClick(t.id)}
+          key={tabId}
+          text={t(`tabs.${tabId}`)}
+          isActive={tabId === currentTab}
+          onClick={handleTabClick(tabId)}
         />
       ))}
     </div>

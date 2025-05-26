@@ -1,8 +1,18 @@
+:root {
+  --details-button-bg-color: #fff;
+
+  --network-message-color: #fff;
+  --error-color: #F44336;
+}
+
 .light {
   --primary-color: #6534FF;
   --secondary-color: #fff;
   --primary-text-color: #050510;
   --gray-text-color: #97979B;
+
+  --select-bg-color: #fff;
+  --select-border-color: #171717;
 
   --search-bg-color: #F7F7F8;
   --search-placeholder-color: #C3C3C6;
@@ -18,7 +28,6 @@
   --user-birthday-color: #55555C;
 
   --details-header-bg-color: #f7f7f8;
-  --details-button-bg-color: #fff;
   --details-button-border-color: #050510;
   --details-icon-color: #050510;
 
@@ -30,10 +39,13 @@
 }
 
 .dark {
-  --primary-color: #6534FF;
+  --primary-color: #7b55f7;
   --secondary-color: #272727;
   --primary-text-color: #ffffff;
   --gray-text-color: #cdcdcd;
+
+  --select-bg-color: #171717;
+  --select-border-color: #171717;
 
   --search-bg-color: #171717;
   --search-placeholder-color: #a2a2a2;
@@ -49,7 +61,6 @@
   --user-birthday-color: #727275;
 
   --details-header-bg-color: #171717;
-  --details-button-bg-color: #fff;
   --details-button-border-color: #fff;
   --details-icon-color: #fff;
 

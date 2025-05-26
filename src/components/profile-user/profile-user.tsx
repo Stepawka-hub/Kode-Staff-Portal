@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { ProfileUserProps } from "./types";
-import defaultAvatar from "@images/default-avatar.png";
 import s from "./profile-user.module.css";
 
 export const ProfileUser: FC<ProfileUserProps> = ({
@@ -8,11 +7,11 @@ export const ProfileUser: FC<ProfileUserProps> = ({
   lastName,
   userTag,
   position,
-  // avatarUrl,
+  avatarUrl,
 }) => (
   <div className={s.profileUser}>
     <div className={s.avatarWrapper}>
-      <img className={s.avatarImage} src={defaultAvatar} alt="Avatar" />
+      <img className={s.avatarImage} src={avatarUrl} alt="Avatar" />
     </div>
     <div className={s.mainInfo}>
       <span className={s.userName}>{`${firstName} ${lastName}`}</span>

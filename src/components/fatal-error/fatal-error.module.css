@@ -10,6 +10,7 @@
   font-size: 1.0625rem;
   font-weight: 600;
   margin: 0.5rem 0 0.75rem;
+  color: var(--primary-text-color);
 }
 
 .text {

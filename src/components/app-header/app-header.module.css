@@ -6,11 +6,30 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 0.75rem;
 }
 
 .select {
-  padding: 0.25rem;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
   outline: none;
   border-radius: 0.5rem;
-  border: 1px solid #000;
+  border: 1px solid var(--select-border-color);
+  color: var(--primary-text-color);
+  background-color: var(--select-bg-color);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last: center;
+}
+
+@media (max-width: 600px) {
+  .settings {
+    gap: 0.5rem;
+  }
+
+  .select {
+    padding: 0.2rem 0.15rem;
+  }
 }

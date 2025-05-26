@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "@store";
-import { getUsersAsync } from "./staff";
+import { getUsersAsync } from './staff';
 
 const INIT_APP = "app/init";
 

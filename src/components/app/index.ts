@@ -1,1 +1,1 @@
-export { App } from './app';
+export { WrappedApp } from './app';

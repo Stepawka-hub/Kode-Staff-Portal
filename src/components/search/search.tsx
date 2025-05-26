@@ -3,14 +3,16 @@ import { useModal } from "@hooks/useModal";
 import { IconList } from "@icons";
 import { getSearchQuery, setSearchQuery } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
-import { FC, useCallback } from "react";
+import { FC, memo, useCallback } from "react";
 import { SearchString } from "./search-string";
 import s from "./search.module.css";
+import { useTranslation } from 'react-i18next';
 
-export const Search: FC = () => {
+export const Search: FC = memo(() => {
   const dispatch = useDispatch();
   const searchQuery = useSelector(getSearchQuery);
   const { showModal, hideModal } = useModal();
+  const { t } = useTranslation();
 
   const handleSearch = useCallback((query: string) => {
     dispatch(setSearchQuery(query));
@@ -24,7 +26,7 @@ export const Search: FC = () => {
     <div className={s.search}>
       <SearchString
         initialValue={searchQuery}
-        placeholder="Введи имя, фамилию, тег..."
+        placeholder={t('search.placeholder')}
         onSearch={handleSearch}
       />
       <button className={s.sortBtn} onClick={handleClick}>
@@ -32,4 +34,4 @@ export const Search: FC = () => {
       </button>
     </div>
   );
-};
+});

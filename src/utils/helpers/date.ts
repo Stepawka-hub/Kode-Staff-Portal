@@ -1,17 +1,29 @@
-export const formatDate = (dateStr: string) =>
-  new Date(dateStr)
-    .toLocaleDateString("ru-RU", {
+const LOCALE_MAP: Record<string, string> = {
+  en: "en-US",
+  ru: "ru-RU",
+};
+
+export const formatDate = (dateStr: string, language: string = "ru") => {
+  const locale = LOCALE_MAP[language] || "ru-RU";
+  return new Date(dateStr)
+    .toLocaleDateString(locale, {
       day: "numeric",
       month: "long",
       year: "numeric",
     })
     .replace(/\sг\.?$/, "");
+};
 
-export const formatBirthdayShort = (dateStr: string) =>
-  new Date(dateStr).toLocaleDateString("ru-RU", {
+export const formatBirthdayShort = (
+  dateStr: string,
+  language: string = "ru"
+) => {
+  const locale = LOCALE_MAP[language] || "ru-RU";
+  return new Date(dateStr).toLocaleDateString(locale, {
     day: "numeric",
     month: "short",
   });
+};
 
 export const getYearsDiff = (
   startDate: string,

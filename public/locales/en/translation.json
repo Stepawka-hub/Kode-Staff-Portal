@@ -1,0 +1,61 @@
+{
+  "app": {
+    "preloader": {
+      "text": "The application is loading..."
+    }
+  },
+  "top-app-bar": {
+    "title": "Search",
+    "network": {
+      "offline": "I can't update the data. Check your internet connection.",
+      "reconnecting": "Let me load in a second..."
+    }
+  },
+  "tabs": {
+    "all": "All",
+    "android": "Android",
+    "ios": "iOS",
+    "design": "Design",
+    "management": "Management",
+    "qa": "QA",
+    "back_office": "Back Office",
+    "frontend": "Frontend",
+    "hr": "HR",
+    "pr": "PR",
+    "backend": "Backend",
+    "support": "Support",
+    "analytics": "Analytics"
+  },
+  "search": {
+    "placeholder": "Enter first name, last name, tag..."
+  },
+  "sort": {
+    "title": "Sort",
+    "asc": "Alphabetically",
+    "birthday": "By birthday"
+  },
+  "language-switcher": {
+    "label-group": "Language",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "theme-switcher": {
+    "label-group": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "empty-search-result": {
+    "title": "We didn't find anyone",
+    "text": "Try to adjust the request"
+  },
+  "fatal-error": {
+    "title": "Some superintelligence broke everything",
+    "text": "We'll try to fix it quickly",
+    "btn-text": "Try again"
+  },
+  "not-found": {
+    "text": "Nothing found!",
+    "btn-text": "Return to home"
+  }
+}
