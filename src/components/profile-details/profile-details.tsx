@@ -5,12 +5,16 @@ import { ProfileDetailsProps } from "./types";
 import { formatPhoneNumber } from "@utils/helpers/phone-number";
 import { IconStar } from "@components/icons/icon-star";
 import { IconPhone } from "@components/icons/icon-phone";
+import { useTranslation } from "react-i18next";
 
 export const ProfileDetails: FC<ProfileDetailsProps> = ({
   birthday,
   phone,
 }) => {
-  const formattedDate = formatDate(birthday);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const formattedDate = formatDate(birthday, currentLanguage);
   const years = useMemo(() => getYearsWithText(birthday), [birthday]);
   const formattedPhone = formatPhoneNumber(phone);
 
@@ -25,7 +29,9 @@ export const ProfileDetails: FC<ProfileDetailsProps> = ({
       </div>
       <div className={s.detailItem}>
         <IconPhone className={s.icon} />
-        <a href={`tel:${phone}`} className={s.link}>{formattedPhone}</a>
+        <a href={`tel:${phone}`} className={s.link}>
+          {formattedPhone}
+        </a>
       </div>
     </div>
   );
