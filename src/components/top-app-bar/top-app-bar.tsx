@@ -3,11 +3,11 @@ import { Tabs } from "@components/tabs";
 import { useNetwork } from "@hooks/useNetwork";
 import { getCurrentTab } from "@slices/search";
 import { useDispatch, useSelector } from "@store";
-import clsx from "clsx";
 import { FC, useCallback } from "react";
-import s from "./top-app-bar.module.css";
 import { getUsersAsync } from "@thunks/staff";
 import { useTranslation } from 'react-i18next';
+import clsx from "clsx";
+import s from "./top-app-bar.module.css";
 
 export const TopAppBar: FC = () => {
   const dispatch = useDispatch();
