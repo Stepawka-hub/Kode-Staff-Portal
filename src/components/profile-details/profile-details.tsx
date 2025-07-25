@@ -1,21 +1,21 @@
-import { formatDate, getYearsWithText } from "@utils/helpers/date";
-import { FC, useMemo } from "react";
-import s from "./profile-details.module.css";
-import { ProfileDetailsProps } from "./types";
-import { formatPhoneNumber } from "@utils/helpers/phone-number";
-import { IconStar } from "@components/icons/icon-star";
-import { IconPhone } from "@components/icons/icon-phone";
+import { FC } from "react";
 import { useTranslation } from "react-i18next";
+import { IconPhone } from "@components/icons/icon-phone";
+import { IconStar } from "@components/icons/icon-star";
+import { formatDate, getYearsDiff } from "@utils/helpers/date";
+import { formatPhoneNumber } from "@utils/helpers/phone-number";
+import { ProfileDetailsProps } from "./types";
+import s from "./profile-details.module.css";
 
 export const ProfileDetails: FC<ProfileDetailsProps> = ({
   birthday,
   phone,
 }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
 
   const formattedDate = formatDate(birthday, currentLanguage);
-  const years = useMemo(() => getYearsWithText(birthday), [birthday]);
+  const years = getYearsDiff(birthday);
   const formattedPhone = formatPhoneNumber(phone);
 
   return (
@@ -25,7 +25,7 @@ export const ProfileDetails: FC<ProfileDetailsProps> = ({
           <IconStar className={s.icon} />
           <span>{formattedDate}</span>
         </div>
-        <span className={s.userAge}>{years}</span>
+        <span className={s.userAge}>{t("years.plural", { count: years })}</span>
       </div>
       <div className={s.detailItem}>
         <IconPhone className={s.icon} />

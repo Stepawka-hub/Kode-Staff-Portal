@@ -57,5 +57,9 @@
   "not-found": {
     "text": "Nothing found!",
     "btn-text": "Return to home"
+  },
+  "years": {
+    "plural": "{{count}} year",
+    "plural_other": "{{count}} years"
   }
 }

@@ -57,5 +57,11 @@
   "not-found": {
     "text": "Ничего не найдено!",
     "btn-text": "Вернуться на главную"
+  },
+  "years": {
+    "plural_one": "{{count}} год",
+    "plural_few": "{{count}} года",
+    "plural_many": "{{count}} лет",
+    "plural_other": "{{count}} лет"
   }
 }
