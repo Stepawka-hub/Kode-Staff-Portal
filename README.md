@@ -49,19 +49,19 @@ npm run build
 <details>
 <summary><b>Развернуть<b></summary></br>
 
-| ![Base functionality](./example_gifs/core.gif) |
+| ![Base functionality](./example_media/core.gif) |
 | :--------------------------------------------: |
 |        _Основной функционал приложения_        |
 
-| ![Base functionality](./example_gifs/test.gif) |
+| ![Base functionality](./example_media/test.gif) |
 | :--------------------------------------------: |
 |        _Основной функционал приложения_        |
 
-| ![Additional Functionality](./example_gifs/additionally.gif "Additional Functionality") |
+| ![Additional Functionality](./example_media/additionally.gif "Additional Functionality") |
 | :-------------------------------------------------------------------------------------: |
 |                          _Локализация, смена темы приложения_                           |
 
-| ![Network](./example_gifs/network.gif "Network") |
+| ![Network](./example_media/network.gif "Network") |
 | :----------------------------------------------: |
 |          _Отслеживание состояния сети_           |
 
